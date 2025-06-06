@@ -23,7 +23,7 @@ function Auth() {
     try {
       const endpoint = isSignUp ? 'signup' : 'login';
 
-      const res = await fetch(`http://localhost:8000/api/${endpoint}`, {
+      const res = await fetch(`https://farmflux.onrender.com/api/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

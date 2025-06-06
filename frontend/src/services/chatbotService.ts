@@ -1,6 +1,6 @@
 export const askAgriBot = async (question: string): Promise<string> => {
   try {
-    const response = await fetch('http://localhost:8000/api/chatbot', {
+    const response = await fetch('https://farmflux.onrender.com/api/chatbot', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

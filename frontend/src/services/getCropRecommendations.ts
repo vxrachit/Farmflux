@@ -17,7 +17,7 @@ export interface CropRecommendation {
 export const getCropRecommendations = async (
   soilParams: SoilParameters
 ): Promise<CropRecommendation[]> => {
-  const response = await fetch('http://localhost:8000/api/crop-recommendations', {
+  const response = await fetch('https://farmflux.onrender.com/api/crop-recommendations', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -30,5 +30,5 @@ export const getCropRecommendations = async (
   }
 
   const data = await response.json();
-  return data.recommendations; // Assuming backend sends { recommendations: [...] }
+  return data.recommendations;
 };
