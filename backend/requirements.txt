@@ -4,3 +4,4 @@ python-dotenv
 pydantic
 google-generativeai
 httpx
+pydantic[email]
