@@ -6,11 +6,14 @@ from app.api import weather
 from app.api import supabase as supabase_routes
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Farm Flux API")
+app = FastAPI(title="Farm Flux API",docs_url=None,redoc_url=None)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=[
+        "https://farmflux.pages.dev",
+        "https://farmflux.vxrachit.dpdns.org"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
