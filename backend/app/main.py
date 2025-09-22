@@ -11,7 +11,7 @@ app = FastAPI(title="Farm Flux API",docs_url=None,redoc_url=None)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://farmflux.pages.dev",
+        "https://farmflux.vxrachit.is-a.dev",
         "https://farmflux.vxrachit.dpdns.org"
     ],
     allow_credentials=True,
